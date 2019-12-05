@@ -40,10 +40,11 @@ $(function () {
     $('.start').attr('disabled', 'true');
     $('.start').click(function () {
         resetInfo();
+        console.log("test"+customers);
         let luckyNum = Math.floor(Math.random() * customers.length);
-        arrValue = customers[luckyNum]["orderId"].toUpperCase();
-        luckyName = customers[luckyNum]["customerName"];
-        luckyOrderId = customers[luckyNum]["orderId"].toUpperCase();
+        arrValue = customers[luckyNum]["orderid"].toUpperCase();
+        luckyName = customers[luckyNum]["customername"];
+        luckyOrderId = customers[luckyNum]["orderid"].toUpperCase();
         console.log(arrValue);
         values = convertArray(arrValue.split(''));
         rouletter.roulette('start');
@@ -95,11 +96,10 @@ $(function () {
 let showInfo = function () {
     $('#c-name').text(luckyName);
     $('#c-orderId').text(luckyOrderId);
-    console.log("winner")
+    console.log("winner");
 }
 let resetInfo = function () {
     $('#c-name').text("");
     $('#c-orderId').text("");
-    console.log("winner")
 }
 

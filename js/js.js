@@ -12,16 +12,16 @@ $(document).ready(function () {
         console.log(screen);
         switch (screen) {
             case "home":
-                window.location.assign("/index.html");
+                window.location.assign("index.html");
                 break;
             case "roulette-1":
-                window.location.assign("/roulette.html?type=gold");
+                window.location.assign("roulette.html?type=gold");
                 break;
             case "roulette-2":
-                window.location.assign("/roulette.html?type=diamond");
+                window.location.assign("roulette.html?type=diamond");
                 break;
             default:
-                window.location.assign("/index.html");
+                window.location.assign("index.html");
                 break;
         }
     }
@@ -37,4 +37,6 @@ $(document).ready(function () {
         {},
         successFunc
     );
+
+    
 });
