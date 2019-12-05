@@ -79,11 +79,11 @@ button.btn.btn-large {
 span#c-name {
     font-weight: bold;
     font-size: 25px;
-    color: #005aab;
+    color: #ff0000;
 }
 
 span#c-orderId {
-    color: #0d62af;
+    color: #ff0000;
 }
 .home-btn {
     position: absolute;
@@ -94,4 +94,7 @@ span#c-orderId {
     width: 100px;
     height: 60px;
     font-size: 30px;
+}
+.customer span {
+    color: #005aab;
 }

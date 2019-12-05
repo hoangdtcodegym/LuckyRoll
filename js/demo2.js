@@ -19,7 +19,7 @@ $(function () {
         stopCallback: function ($stopElm) {
             $('.start').removeAttr('disabled');
             $('.stop').attr('disabled', 'true');
-            setTimeout(showInfo,1000);
+            setTimeout(showInfo,2000);
         }
 
     }
