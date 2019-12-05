@@ -25,18 +25,4 @@ $(document).ready(function () {
                 break;
         }
     }
-    function successFunc(data) {
-        customers = data;
-        console.log(customers);
-        $('.start').removeAttr('disabled');
-    }
-
-    Sheetsu.read(
-        // "https://sheetsu.com/apis/v1.0lw/020b2c0f/",
-        "https://sheetsu.com/apis/v1.0su/b2d8fd7b7a69/",
-        {},
-        successFunc
-    );
-
-    
 });

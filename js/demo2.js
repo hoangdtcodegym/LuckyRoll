@@ -19,13 +19,13 @@ $(function () {
         stopCallback: function ($stopElm) {
             $('.start').removeAttr('disabled');
             $('.stop').attr('disabled', 'true');
+            setTimeout(showInfo,1000);
         }
 
     }
     initRoulette();
     let rouletter = $('div.roulette');
     rouletter.roulette(p);
-    console.log(rouletter);
     $('.stop').click(function () {
         let stopImageNumber = -1;
         if (stopImageNumber == "") {
@@ -40,12 +40,10 @@ $(function () {
     $('.start').attr('disabled', 'true');
     $('.start').click(function () {
         resetInfo();
-        console.log("test"+customers);
         let luckyNum = Math.floor(Math.random() * customers.length);
         arrValue = customers[luckyNum]["orderid"].toUpperCase();
         luckyName = customers[luckyNum]["customername"];
         luckyOrderId = customers[luckyNum]["orderid"].toUpperCase();
-        console.log(arrValue);
         values = convertArray(arrValue.split(''));
         rouletter.roulette('start');
     });
@@ -96,7 +94,6 @@ $(function () {
 let showInfo = function () {
     $('#c-name').text(luckyName);
     $('#c-orderId').text(luckyOrderId);
-    console.log("winner");
 }
 let resetInfo = function () {
     $('#c-name').text("");

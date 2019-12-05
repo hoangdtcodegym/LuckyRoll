@@ -161,7 +161,6 @@
                 }
                 slowDownSetup();
             }
-            setTimeout(showInfo,5000);
         }
         let option = function(options) {
             p = $.extend(p, options);
