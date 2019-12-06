@@ -39,6 +39,7 @@
 .roulette {
     position: relative;
     height: 64px!important;
+    width:56px!important;
     transform: translate(0px, 0px);
     display: inline-block;
 }
