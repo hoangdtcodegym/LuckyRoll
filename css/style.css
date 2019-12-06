@@ -98,3 +98,6 @@ span#c-orderId {
 .customer span {
     color: #005aab;
 }
+.deactive {
+    opacity:0.5;
+}

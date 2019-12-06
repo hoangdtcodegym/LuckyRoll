@@ -12,13 +12,18 @@ $(function () {
         startCallback: function () {
             $('.start').attr('disabled', 'true');
             $('.stop').removeAttr('disabled');
+            $('.start').addClass('deactive');
+            $('.stop').removeClass('deactive');
         },
         slowDownCallback: function () {
             $('.stop').attr('disabled', 'true');
+            $('.stop').addClass('deactive');
         },
         stopCallback: function ($stopElm) {
             $('.start').removeAttr('disabled');
             $('.stop').attr('disabled', 'true');
+            $('.start').removeClass('deactive');
+            $('.stop').addClass('deactive');
             setTimeout(showInfo,2000);
         }
 

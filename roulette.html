@@ -20,8 +20,9 @@
         <div class="orderId"><span>Mã đặt hàng: </span><span id="c-orderId">Order ID of Member</span></div>
     </div>
     <div class="btn_container">
-        <button class="btn btn-large btn-success start"> START</button>
-        <button class="stop btn-large btn btn-danger"> STOP</button>
+        <input type="image" class="start" src="Images/start.png"/>
+        <input type="image" class="stop" src="Images/stop.png"/>
+<!--        <button class="stop btn-large btn btn-danger"> STOP</button>-->
     </div>
     <button class="home-btn glyphicon glyphicon-home btn btn-info btn-lg"></button>
 </div>
@@ -67,7 +68,7 @@
         let id = parseURLParams(window.location.href)["type"][0];
         switch (id) {
             case "gold":
-                document.getElementById("main-gift").src = "Images/lovisong.png"
+                document.getElementById("main-gift").src = "Images/bg-gold.jpg"
                 break;
             case "diamond":
                 document.getElementById("main-gift").src = "Images/tivi.png"
