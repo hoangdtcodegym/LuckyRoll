@@ -36,6 +36,11 @@
     left: 62%;
 }
 
+.btn-main {
+    top: 72%;
+    left: 50%;
+}
+
 .roulette {
     position: relative;
     height: 64px!important;
