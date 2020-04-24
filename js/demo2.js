@@ -7,6 +7,7 @@ $(function () {
     let spd = 30;
     let dur = 10;
     let choice = -1;
+
     let p = {
 
         startCallback: function () {
@@ -29,6 +30,7 @@ $(function () {
 
     }
     initRoulette();
+    $('.start').removeAttr('disabled');
     let rouletter = $('div.roulette');
     rouletter.roulette(p);
     $('.stop').click(function () {
@@ -41,15 +43,22 @@ $(function () {
         // showInfo();
         rouletter.roulette('stop');
     });
-    $('.stop').attr('disabled', 'true');
-    $('.start').attr('disabled', 'true');
+    // $('.stop').attr('disabled', 'true');
+    // $('.start').attr('disabled', 'true');
     $('.start').click(function () {
         resetInfo();
-        let luckyNum = Math.floor(Math.random() * customers.length);
-        arrValue = customers[luckyNum]["orderid"].toUpperCase();
-        luckyName = customers[luckyNum]["customername"];
-        luckyOrderId = customers[luckyNum]["orderid"].toUpperCase();
-        values = convertArray(arrValue.split(''));
+        let luckyNum1 = Math.floor(Math.random() * 9);
+        let luckyNum2 = Math.floor(Math.random() * 9);
+        let luckyNum3 = Math.floor(Math.random() * 9);
+        let luckyNum4 = Math.floor(Math.random() * 9);
+        // arrValue = customers[luckyNum]["orderid"].toUpperCase();
+        // luckyName = customers[luckyNum]["customername"];
+        // luckyOrderId = customers[luckyNum]["orderid"].toUpperCase();
+
+        arrValue = "";
+        luckyName = "VNSHOP"+luckyNum1+luckyNum2+luckyNum3+luckyNum4;
+        luckyOrderId = luckyName.toUpperCase();
+        values = convertArray(luckyName.split(''));
         rouletter.roulette('start');
     });
 

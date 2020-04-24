@@ -8,8 +8,8 @@ const options = {
 }
 GSheetProcessor(options, results => {
     customers = Array.from(results);
-    $().ready(function () {
+    // $().ready(function () {
         $('.start').removeAttr('disabled');
-    });
+    // });
 
 });
